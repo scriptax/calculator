@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Test7-Calculator</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="calculator.css">
+        <script src="calculator.js"></script>
+    </head>
+    <body>
+        <div id="calc">
+            <div id="screen">
+            </div>
+            <div id="Keys">
+                <div class="top" onclick="makeExp(this)">C</div>
+                <div class="top" onclick="entOp(this)">(</div>
+                <div class="top" onclick="entOp(this)">)</div>
+                <div class="top" onclick="calc(this)">
+                    <span class="material-symbols-outlined">backspace</span>
+                </div>
+                <div class="nums" onclick="entNum(this)">7</div>
+                <div class="nums" onclick="entNum(this)">8</div>
+                <div class="nums" onclick="entNum(this)">9</div>
+                <div class="ops" onclick="entOp(this)">÷</div>
+                <div class="nums" onclick="entNum(this)">4</div>
+                <div class="nums" onclick="entNum(this)">5</div>
+                <div class="nums" onclick="entNum(this)">6</div>
+                <div class="ops" onclick="entOp(this)">×</div>
+                <div class="nums" onclick="entNum(this)">1</div>
+                <div class="nums" onclick="entNum(this)">2</div>
+                <div class="nums" onclick="entNum(this)">3</div>
+                <div class="ops" onclick="entOp(this)">-</div>
+                <div class="nums" onclick="entNum(this)">0</div>
+                <div class="nums" onclick="entNum(this)">.</div>
+                <div id="equal" onclick="calc(this)">=</div>
+                <div class="ops" onclick="entOp(this)">+</div>
+            </div>
+        </div>
+    </body>
+</html>
