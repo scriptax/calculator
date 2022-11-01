@@ -12,10 +12,10 @@
             <div id="screen">
             </div>
             <div id="Keys">
-                <div class="top" onclick="makeExp(this)">C</div>
+                <div class="top" onclick="clearAll()">C</div>
                 <div class="top" onclick="entOp(this)">(</div>
                 <div class="top" onclick="entOp(this)">)</div>
-                <div class="top" onclick="calc(this)">
+                <div class="top" onclick="backSpace()">
                     <span class="material-symbols-outlined">backspace</span>
                 </div>
                 <div class="nums" onclick="entNum(this)">7</div>
@@ -32,7 +32,7 @@
                 <div class="ops" onclick="entOp(this)">-</div>
                 <div class="nums" onclick="entNum(this)">0</div>
                 <div class="nums" onclick="entNum(this)">.</div>
-                <div id="equal" onclick="calc(this)">=</div>
+                <div id="equal" onclick="calculate()">=</div>
                 <div class="ops" onclick="entOp(this)">+</div>
             </div>
         </div>
