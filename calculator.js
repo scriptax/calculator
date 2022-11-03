@@ -50,12 +50,12 @@ const checker = {
         let openPars = exp.match(/[(]/g) == null ? 0 : exp.match(/[(]/g).length;
         let closePars = exp.match(/[)]/g) == null ? 0 : exp.match(/[)]/g).length;
         if(openPars != closePars){
-            alert("Uneven parenthesis used!");
+            alrt("Unbalanced parentheses used!");
             return true;
         }
 
         if(/[*/+-]/.test(exp[exp.length - 1])){
-            alert("Invalid end of expression!");
+            alrt("Invalid end of expression!");
             return true;
         }
         return false;
@@ -95,8 +95,12 @@ function entOp(op){
 
 function calculate(){
     if(checker.finalCheck(expCalc) === true) return undefined;
-
-    answer = eval(expCalc);   
+    try{
+        answer = eval(expCalc);   
+    }
+    catch(e){
+        alrt("Syntax error!")
+    }
     expCalc = String(answer);
     reset = true;
     display(String(answer));
@@ -120,4 +124,13 @@ function display(expression){
     let expDisp = expression.replace(/[*]/g, '×');
     expDisp = expDisp.replace(/[/]/g, '÷');
     document.getElementById('screen').innerHTML = expDisp;
+}
+
+function alrt(message){
+    let box = document.getElementById('box');
+    box.innerHTML = message;
+    box.style.opacity = 1;
+    setTimeout(() => {
+        box.style.opacity = 0;
+    }, 1500);
 }
